@@ -1,0 +1,58 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.icon-style {
+    width:50%;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.current-day {
+    padding-top: 2%;
+}
+
+.event-left {
+    border-style: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: -10px;
+    width:50%;
+}
+
+.event-right {
+    border-style: hidden;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: -10px;
+    width:50%;
+}
+
+.event-middle {
+    /* border-style: hidden; */
+    /* border-width: thick; */
+    /* border-color: lightblue; */
+}
+
+.departure-time {
+    font-weight: bold;
+}
+
+.footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
