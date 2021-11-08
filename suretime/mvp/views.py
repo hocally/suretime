@@ -1,36 +1,23 @@
 from django.shortcuts import render
+import random
 
 # Create your views here.
 
-from .models import Event, Location
+from .models import Event
 
 def index(request):
     """View function for home page of site."""
 
     # Generate counts of some of the main objects
-    num_locations = Location.objects.all().count()
-    num_events = Event.objects.all().count()
 
-    events = [
-        {
-            "Name" : "Work",
-            "Location" : "3M Corporate Center",
-            "Departure_Time" : "7:41 AM",
-            "Color" : "lightblue"
-        },
-        {
-            "Name" : "School",
-            "Location" : "University of Minnesota",
-            "Departure_Time" : "4:35 PM",
-            "Color" : "lightyellow"
-        },
-        {
-            "Name" : "Flight DL892",
-            "Location" : "MSP Airport",
-            "Departure_Time" : "8:49 PM",
-            "Color" : "lightgreen"
-        }
-    ]
+    items = list(Event.objects.all())
+
+    # For the current demo, select three events at random
+    events_set = random.sample(items, 3)
+
+    events = []
+    for event in events_set:
+        events.append(event.jsonify())
 
     context = {
         "events": events
