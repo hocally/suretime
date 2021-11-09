@@ -10,6 +10,7 @@ class Event(models.Model):
     departure_time = models.CharField(max_length=200)
     location = models.CharField(max_length=200)
     color = models.CharField(max_length=200)
+    secret_number = models.CharField(max_length=200)
     
     # ManyToManyField used because genre can contain many books. Books can cover many genres.
     # Genre class has already been defined so we can specify the object above.
